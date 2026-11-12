@@ -522,15 +522,6 @@ body.editing .slot-tag{display:inline-block!important}
   <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"/></symbol>
 </svg>
 
-<header class="topbar">
-  <div class="wrap">
-    <a class="nav-badge" href="#top" aria-label="منصت، العودة للأعلى"><img src="assets/logo-white.webp" alt=""></a>
-    <span class="nav-step" id="nav-step">00 / 22</span>
-    <div class="wave" aria-hidden="true"><div class="bars" id="wave-base"></div><div class="bars on" id="wave-on"></div></div>
-    <a class="nav-cta site-link" href="#" target="_blank" rel="noopener"><svg><use href="#i-link"/></svg><span>جرّب المنصة</span></a>
-  </div>
-</header>
-
 <main>
 
 <!-- HERO -->
@@ -1084,23 +1075,6 @@ applyLink("");
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const amp = i => 0.25 + 0.75 * Math.abs(Math.sin(i * 0.71) * Math.cos(i * 0.23 + 1));
 const bars = (el, n, f = 1) => { el.innerHTML = Array.from({length:n}, (_, i) => `<i style="--h:${(amp(i) * f).toFixed(3)}"></i>`).join(""); };
-
-/* nav waveform = scroll progress */
-const waveN = innerWidth < 640 ? 32 : 64;
-bars(document.getElementById("wave-base"), waveN);
-bars(document.getElementById("wave-on"), waveN);
-const waveOn = document.getElementById("wave-on");
-const navStep = document.getElementById("nav-step");
-const steps = [...document.querySelectorAll("[data-step]")];
-function onScroll(){
-  const max = document.documentElement.scrollHeight - innerHeight;
-  const p = max > 0 ? Math.min(1, scrollY / max) : 0;
-  waveOn.style.setProperty("--p", (p * 100).toFixed(1) + "%");
-  let cur = 0;
-  for (const s of steps) { if (s.getBoundingClientRect().top < innerHeight * .45) cur = +s.dataset.step; }
-  navStep.textContent = String(cur).padStart(2, "0") + " / 22";
-}
-addEventListener("scroll", onScroll, {passive:true}); onScroll();
 
 /* week waveforms */
 document.querySelectorAll(".weeks .wf").forEach((el, k) => {
