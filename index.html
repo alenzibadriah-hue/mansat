@@ -2,8 +2,15 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500;700;800;900&family=Readex+Pro:wght@300;400;500;600&display=swap">
+<link rel="preload" href="fonts/bukra-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bukra-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&display=swap">
 <style>
+@font-face{font-family:"29LT Bukra";src:url(fonts/bukra-300.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"29LT Bukra";src:url(fonts/bukra-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"29LT Bukra";src:url(fonts/bukra-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"29LT Bukra";src:url(fonts/bukra-700.woff2) format("woff2");font-weight:700 900;font-display:swap}
+
 /* Concept: «الإنصات». The page listens: scattered customer comments get sorted into topics in the hero, a waveform in the nav fills as you scroll, and every chapter is a card on a soft lavender ground (reference: Bashar portfolio). Brand purple is the only loud colour. */
 :root{
   --brand:#6045f5;
@@ -18,8 +25,8 @@
   --ground:#f2f1f6;
   --card:#ffffff;
   --inset:#f7f6fb;
-  --f-display:"Alexandria","Readex Pro","Segoe UI",Tahoma,sans-serif;
-  --f-body:"Readex Pro","Segoe UI",Tahoma,sans-serif;
+  --f-display:"29LT Bukra","Readex Pro","Segoe UI",Tahoma,sans-serif;
+  --f-body:"29LT Bukra","Readex Pro","Segoe UI",Tahoma,sans-serif;
   --wrap:1100px;
   --r-xl:36px;--r-lg:24px;--r-md:18px;
   --ease:cubic-bezier(.2,.75,.2,1);
@@ -842,7 +849,16 @@ body.editing .slot-tag{display:inline-block!important}
       <div class="eyebrow" data-k="eb.14">لحظة الحقيقة</div>
       <h2 data-k="live.1">والآن ... منصت أمامكم.</h2>
     </div>
-    <figure class="slot" style="--ar:16/9"><span class="slot-tag">slot · demo-video</span><div class="slot-box"><svg><use href="#i-vid"/></svg><b data-k="live.2">فيديو يُضاف لاحقًا</b><span>تسجيل أو عرض حي للنظام الحقيقي</span></div></figure>
+    <figure class="player">
+      <video id="demo-video" controls playsinline preload="metadata" poster="assets/demo-poster.jpg">
+        <source src="assets/demo.mp4" type="video/mp4">
+      </video>
+      <button class="cover" type="button" data-video="demo-video" aria-label="تشغيل فيديو العرض الحي لمنصت">
+        <img src="assets/demo-poster.jpg" alt="">
+        <span class="play"><svg><use href="#i-play"/></svg></span>
+        <span class="cap"><b>منصت من الداخل</b><span>من رفع الملف إلى التوصيات · دقيقة ونصف تقريبًا</span></span>
+      </button>
+    </figure>
   </div>
 </section>
 
@@ -945,7 +961,7 @@ body.editing .slot-tag{display:inline-block!important}
       <video id="dash-video" controls playsinline preload="metadata" poster="assets/dashboard-poster.jpg">
         <source src="assets/dashboard.mp4" type="video/mp4">
       </video>
-      <button class="cover" id="dash-cover" type="button" aria-label="تشغيل فيديو شرح لوحة التحكم">
+      <button class="cover" type="button" data-video="dash-video" aria-label="تشغيل فيديو شرح لوحة التحكم">
         <img data-img="dashboard.i1" src="assets/dashboard-poster.jpg" alt="">
         <span class="play"><svg><use href="#i-play"/></svg></span>
         <span class="cap"><b data-k="dashboard.3">شرح لوحة التحكم</b><span>دقيقة ونصف تقريبًا</span></span>
@@ -1172,22 +1188,10 @@ if (!reduce && "IntersectionObserver" in window) {
   io2.observe(document.querySelector(".engine"));
 }
 
-/* video cover */
-const cover = document.getElementById("dash-cover"), vid = document.getElementById("dash-video");
-cover.addEventListener("click", () => { cover.hidden = true; vid.play().catch(() => {}); });
-
-/* ── investment chapter ── */
-const fmt = n => Math.round(n).toLocaleString("en-US");
-const counters = document.querySelectorAll(".count");
-if (!reduce && "IntersectionObserver" in window) {
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return; cio.unobserve(e.target);
-    const el = e.target, to = +el.dataset.to, t0 = performance.now(), d = 1400;
-    const tick = t => { const k = Math.min(1, (t - t0) / d); el.textContent = fmt(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
-    requestAnimationFrame(tick);
-  }), {threshold:.6});
-  counters.forEach(c => cio.observe(c));
-}
+/* video covers */
+document.querySelectorAll(".cover[data-video]").forEach(c => c.addEventListener("click", () => {
+  const v = document.getElementById(c.dataset.video); c.hidden = true; v.play().catch(() => {});
+}));
 </script>
 <script>
 /* ── المحتوى القابل للتعديل + لوحة التحكم ──
