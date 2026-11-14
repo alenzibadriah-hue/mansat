@@ -487,7 +487,7 @@ footer img{height:26px;width:auto}
   .road-mini li{grid-column:auto}
 }
 /* ── content + control panel ── */
-.slot-media{width:100%;display:block;border-radius:var(--r-lg);background:var(--inset)}
+.slot-media{width:100%;height:auto;display:block;border-radius:var(--r-lg);background:var(--inset)}
 video.slot-media{background:var(--ink)}
 .slot.filled .slot-tag{display:none}
 .admin-fab{position:fixed;z-index:70;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:calc(18px + env(safe-area-inset-right,0px));display:flex;gap:8px;align-items:center}
@@ -908,10 +908,10 @@ body.editing .slot-tag{display:inline-block!important}
       <div class="channel"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><b data-k="presence.4">إنستغرام</b><span>منشورات بصرية وهوية</span></div></div>
       <div class="channel"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.3 6.2V8.6a8 8 0 0 0 4.4 1.4V6.7a4.6 4.6 0 0 1-4.4-4.7Z"/></svg></span><div><b data-k="presence.5">تيك توك</b><span>فيديوهات قصيرة وشرح سريع للمنتج</span></div></div>
     </div>
-    <div class="slots">
-      <figure class="slot" style="--ar:4/5"><span class="slot-tag">slot · presence-x</span><div class="slot-box"><svg><use href="#i-img"/></svg><b data-k="presence.6">صورة تُضاف لاحقًا</b><span>لقطة من حساب إكس</span></div></figure>
-      <figure class="slot" style="--ar:4/5"><span class="slot-tag">slot · presence-ig</span><div class="slot-box"><svg><use href="#i-img"/></svg><b data-k="presence.7">صورة تُضاف لاحقًا</b><span>لقطة من حساب إنستغرام</span></div></figure>
-      <figure class="slot" style="--ar:4/5"><span class="slot-tag">slot · presence-tt</span><div class="slot-box"><svg><use href="#i-img"/></svg><b data-k="presence.8">صورة تُضاف لاحقًا</b><span>لقطة من حساب تيك توك</span></div></figure>
+    <div class="slots" style="--n:3">
+      <figure class="slot filled"><img class="slot-media" src="assets/presence-x-ig.webp" alt="حسابا منصت على إكس وإنستغرام على شاشتي جوال" loading="lazy"><figcaption class="note">إكس · إنستغرام</figcaption></figure>
+      <figure class="slot filled"><img class="slot-media" src="assets/presence-instagram.webp" alt="حساب منصت على إنستغرام وقصة «أكثر سبب يخلي عملاء متجرك يشتكون؟»" loading="lazy"><figcaption class="note">إنستغرام · الحساب والقصص</figcaption></figure>
+      <figure class="slot filled"><img class="slot-media" src="assets/presence-tiktok.webp" alt="حساب منصت على تيك توك وفيديو «قريبًا» على شاشتي جوال" loading="lazy"><figcaption class="note">تيك توك</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1200,7 +1200,7 @@ document.querySelectorAll(".cover[data-video]").forEach(c => c.addEventListener(
 (function(){
   let content = {siteUrl:"", texts:{}, media:{}, images:{}, rev:0};
   const slotKey = fig => (fig.querySelector(".slot-tag")?.textContent || "").replace("slot ·", "").trim();
-  const slots = () => [...document.querySelectorAll("figure.slot")];
+  const slots = () => [...document.querySelectorAll("figure.slot")].filter(f => f.querySelector(".slot-tag"));
 
   function renderSlot(fig, m){
     const old = fig.querySelector(".slot-media"); if (old) old.remove();
