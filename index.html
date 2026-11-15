@@ -1116,7 +1116,8 @@ function applyLink(url){
   });
   const n = document.getElementById("link-note"); if (n) n.hidden = !!url;
 }
-applyLink("");
+const SITE_URL = "https://data-analysis-platform-1.onrender.com/";
+applyLink(SITE_URL);
 
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const amp = i => 0.25 + 0.75 * Math.abs(Math.sin(i * 0.71) * Math.cos(i * 0.23 + 1));
@@ -1244,7 +1245,7 @@ document.querySelectorAll(".cover[data-video]").forEach(c => c.addEventListener(
     fig.appendChild(el); fig.classList.add("filled");
   }
   function apply(c){
-    applyLink(c.siteUrl || "");
+    applyLink(c.siteUrl || SITE_URL);
     document.querySelectorAll("[data-k]").forEach(el => {
       if (!el.dataset.orig) el.dataset.orig = el.textContent;
       const v = c.texts && c.texts[el.dataset.k];
