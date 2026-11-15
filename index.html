@@ -1,4 +1,24 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="منصت | رحلة بناء منتج رقمي ذكي يحلّل شكاوى العملاء ويحوّلها إلى فهم."><meta property="og:title" content="منصت | رحلة بناء المنتج"><meta property="og:image" content="assets/hero.webp"><link rel="icon" href="assets/logo.webp"><style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style></head><body><title>منصت | رحلة بناء المنتج</title>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="منصت | رحلة بناء منتج رقمي ذكي يحلّل شكاوى العملاء ويحوّلها إلى فهم."><meta property="og:title" content="منصت | رحلة بناء المنتج"><meta property="og:image" content="assets/hero.webp"><link rel="icon" href="assets/logo.webp"><style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}/* ── survey ── */
+.sv-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sv-kpi{padding:24px 22px;border-radius:var(--r-lg);background:var(--inset);display:grid;gap:6px;align-content:start}
+.sv-kpi b{font-family:var(--f-display);font-weight:800;font-size:clamp(40px,5vw,54px);line-height:1;color:var(--brand);font-variant-numeric:tabular-nums;direction:ltr;justify-self:start}
+.sv-kpi > span{color:var(--muted);font-size:15px;line-height:1.6}
+.sv-kpi.hl{background:var(--brand)}
+.sv-kpi.hl b{color:#fff}.sv-kpi.hl > span{color:rgba(255,255,255,.85)}
+.sv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.sv-grid > *{min-width:0}
+.sv-card{padding:24px;border-radius:var(--r-lg);background:var(--inset);display:grid;gap:14px;align-content:start}
+.sv-card h3{margin:0;font-weight:700;font-size:19px;color:var(--brand)}
+.sv-bars{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.sv-bars li{display:grid;grid-template-columns:1fr 44px;grid-template-rows:auto 8px;column-gap:12px;row-gap:6px;align-items:center}
+.sv-bars span{font-size:15px}
+.sv-bars b{grid-row:1 / span 2;grid-column:2;font-family:var(--f-display);font-weight:700;color:var(--brand);text-align:left;font-variant-numeric:tabular-nums}
+.sv-bars i{grid-column:1;height:8px;border-radius:999px;background:linear-gradient(to left,var(--brand) var(--w),var(--brand-soft) var(--w))}
+.sv-full{border-radius:var(--r-lg);background:var(--inset);padding:14px 20px}
+.sv-full summary{cursor:pointer;font-family:var(--f-display);font-weight:700;color:var(--brand)}
+.sv-full img{margin-top:14px;border-radius:14px;width:100%}
+@media (max-width:900px){.sv-kpis{grid-template-columns:1fr 1fr}.sv-grid{grid-template-columns:1fr}}
+</style></head><body><title>منصت | رحلة بناء المنتج</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -539,7 +559,7 @@ body.editing .slot-tag{display:inline-block!important}
       <span class="badge"><img src="assets/logo-white.webp" alt="شعار منصت Ministry"></span>
     </div>
     <div class="meta rise d2">
-      <span class="chip"><i></i>23 محطة</span>
+      <span class="chip"><i></i>24 محطة</span>
       <span>7 أعضاء · 4 أسابيع · من الفكرة إلى رابط يعمل · وملف استثماري</span>
     </div>
     <p class="lede rise d3">من فكرة تُناقش ... <b data-k="top.2">إلى منصة تُنصت.</b><br>رحلة بناء منتج رقمي ذكي يسمع شكاوى العملاء ويحوّلها إلى فهم.</p>
@@ -567,11 +587,11 @@ body.editing .slot-tag{display:inline-block!important}
 
   <div class="rail" aria-label="لمحات من المشروع">
     <a class="show" href="#problem"><img data-img="top.i1" src="assets/hero.webp" alt="ملفات وتقارير بجانب حاسوب يعرض لوحة منصت"><span class="tag">الفكرة <em>/ 01</em></span></a>
-    <a class="show contain" href="#identity"><img src="assets/logo-white.webp" alt="شعار منصت"><span class="tag">الهوية <em>/ 06</em></span></a>
-    <a class="show" href="#identity"><img data-img="top.i2" src="assets/mock-phone.webp" alt="تطبيق منصت على الجوال"><span class="tag">التطبيقات <em>/ 06</em></span></a>
-    <a class="show light" href="#wireframes"><img data-img="top.i3" src="assets/wf-sitemap.webp" alt="خريطة صفحات منصت"><span class="tag">تخطيط الواجهات <em>/ 08</em></span></a>
-    <a class="show" href="#dashboard"><img data-img="top.i4" src="assets/dashboard-poster.jpg" alt="لقطة من لوحة تحكم فريق منصت"><span class="tag">لوحة التحكم <em>/ 20</em></span></a>
-    <a class="show" href="#identity"><img data-img="top.i5" src="assets/mock-laptop.webp" alt="منصت على حاسوب محمول"><span class="tag">الواجهة <em>/ 06</em></span></a>
+    <a class="show contain" href="#identity"><img src="assets/logo-white.webp" alt="شعار منصت"><span class="tag">الهوية <em>/ 07</em></span></a>
+    <a class="show" href="#identity"><img data-img="top.i2" src="assets/mock-phone.webp" alt="تطبيق منصت على الجوال"><span class="tag">التطبيقات <em>/ 07</em></span></a>
+    <a class="show light" href="#wireframes"><img data-img="top.i3" src="assets/wf-sitemap.webp" alt="خريطة صفحات منصت"><span class="tag">تخطيط الواجهات <em>/ 09</em></span></a>
+    <a class="show" href="#dashboard"><img data-img="top.i4" src="assets/dashboard-poster.jpg" alt="لقطة من لوحة تحكم فريق منصت"><span class="tag">لوحة التحكم <em>/ 21</em></span></a>
+    <a class="show" href="#identity"><img data-img="top.i5" src="assets/mock-laptop.webp" alt="منصت على حاسوب محمول"><span class="tag">الواجهة <em>/ 07</em></span></a>
   </div>
 </section>
 
@@ -668,11 +688,40 @@ body.editing .slot-tag{display:inline-block!important}
   </div>
 </section>
 
-<section class="act" data-step="5"><div class="wrap"><small>الفصل الثاني</small><h2>نرسم ما سمعناه</h2><p>الهوية · التجربة · الواجهات</p></div></section>
+<!-- survey -->
+<section class="part" id="survey" data-step="6">
+  <div class="wrap" data-n="06">
+    <div class="head">
+      <div class="eyebrow">الاستبيان الأولي</div>
+      <h2>سألنا الشركات قبل أن نبني.</h2>
+      <p>أجرينا استبيانًا أوليًا للشركات لفهم احتياجها في تحليل بيانات العملاء، ورصدنا المهتمين بتجربة منصت. نوفمبر 2026.</p>
+    </div>
+    <div class="sv-kpis">
+      <div class="sv-kpi hl"><b><span class="count" data-to="100">100</span>%</b><span>يرون المنصة مفيدة أو مفيدة جدًا</span></div>
+      <div class="sv-kpi"><b><span class="count" data-to="60">60</span>%</b><span>يرغبون بالتجربة في أقرب وقت</span></div>
+      <div class="sv-kpi"><b><span class="count" data-to="80">80</span>%</b><span>وافقوا على التواصل للمتابعة</span></div>
+      <div class="sv-kpi"><b><span class="count" data-to="80">80</span>%</b><span>يحتاجون مزيدًا من التقييم للاشتراك</span></div>
+    </div>
+    <div class="sv-grid">
+      <div class="sv-card"><h3>آلية التحليل الحالية</h3><ul class="sv-bars"><li><span>فريق داخلي</span><i style="--w:40%"></i><b>40%</b></li><li><span>لا توجد آلية منتظمة</span><i style="--w:40%"></i><b>40%</b></li><li><span>يدويًا باستخدام إكسل</span><i style="--w:20%"></i><b>20%</b></li></ul></div>
+      <div class="sv-card"><h3>تحديات التحليل</h3><ul class="sv-bars"><li><span>كثرة البيانات وصعوبة تصنيفها</span><i style="--w:40%"></i><b>40%</b></li><li><span>لا توجد تحديات واضحة</span><i style="--w:40%"></i><b>40%</b></li><li><span>صعوبة استخراج توصيات عملية</span><i style="--w:20%"></i><b>20%</b></li></ul></div>
+      <div class="sv-card"><h3>الميزات المطلوبة</h3><ul class="sv-bars"><li><span>توصيات لتحسين الخدمات</span><i style="--w:40%"></i><b>40%</b></li><li><span>تصنيف الشكاوى والتعليقات</span><i style="--w:20%"></i><b>20%</b></li><li><span>اكتشاف المشكلات المتكررة</span><i style="--w:20%"></i><b>20%</b></li><li><span>لوحات مؤشرات وتقارير</span><i style="--w:20%"></i><b>20%</b></li></ul></div>
+      <div class="sv-card"><h3>الميزانية الشهرية المناسبة</h3><ul class="sv-bars"><li><span>أقل من 300 ريال</span><i style="--w:40%"></i><b>40%</b></li><li><span>من 700 إلى 1,499 ريال</span><i style="--w:20%"></i><b>20%</b></li><li><span>لا توجد ميزانية حاليًا</span><i style="--w:40%"></i><b>40%</b></li></ul></div>
+    </div>
+    <div class="callout">دلالة أولية: العرض التوضيحي والتجربة العملية خطوة مهمة قبل تحويل الاهتمام إلى اشتراك مدفوع.</div>
+    <details class="sv-full">
+      <summary>عرض لوحة النتائج كاملة</summary>
+      <img src="assets/survey-results.webp" alt="لوحة نتائج الاستبيان الأولي لمنصت كاملة" loading="lazy">
+    </details>
+    <p class="note">المصدر: الاستبيان المرفق. النسب من إجمالي الاستجابات المكتملة، وهي نتائج استكشافية لعينة محدودة ولا تمثل السوق بالكامل.</p>
+  </div>
+</section>
+
+<section class="act" data-step="6"><div class="wrap"><small>الفصل الثاني</small><h2>نرسم ما سمعناه</h2><p>الهوية · التجربة · الواجهات</p></div></section>
 
 <!-- 06 -->
-<section class="part" id="identity" data-step="6">
-  <div class="wrap" data-n="06">
+<section class="part" id="identity" data-step="7">
+  <div class="wrap" data-n="07">
     <div class="head">
       <div class="eyebrow" data-k="eb.6">بناء الهوية</div>
       <h2 data-k="identity.1">هوية تبدأ من الكلمة.</h2>
@@ -698,8 +747,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 07 -->
-<section class="part" id="ux" data-step="7">
-  <div class="wrap" data-n="07">
+<section class="part" id="ux" data-step="8">
+  <div class="wrap" data-n="08">
     <div class="head">
       <div class="eyebrow" data-k="eb.7">دراسة التجربة</div>
       <h2 data-k="ux.1">بدأنا بالمستخدم ... لا بالشاشة.</h2>
@@ -717,8 +766,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 08 -->
-<section class="part" id="wireframes" data-step="8">
-  <div class="wrap" data-n="08">
+<section class="part" id="wireframes" data-step="9">
+  <div class="wrap" data-n="09">
     <div class="head">
       <div class="eyebrow" data-k="eb.8">تخطيط الواجهات</div>
       <h2 data-k="wireframes.1">كل خطوة محسوبة.</h2>
@@ -742,8 +791,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 09 -->
-<section class="part" id="visual" data-step="9">
-  <div class="wrap" data-n="09">
+<section class="part" id="visual" data-step="10">
+  <div class="wrap" data-n="10">
     <div class="head">
       <div class="eyebrow" data-k="eb.9">التصميم البصري</div>
       <h2 data-k="visual.1">من الفكرة إلى واجهة ملموسة.</h2>
@@ -756,11 +805,11 @@ body.editing .slot-tag{display:inline-block!important}
   </div>
 </section>
 
-<section class="act" data-step="9"><div class="wrap"><small>الفصل الثالث</small><h2>نحوّل الإنصات إلى كود</h2><p>البرمجة · المحرك الذكي · النشر · الاختبار</p></div></section>
+<section class="act" data-step="10"><div class="wrap"><small>الفصل الثالث</small><h2>نحوّل الإنصات إلى كود</h2><p>البرمجة · المحرك الذكي · النشر · الاختبار</p></div></section>
 
 <!-- 10 -->
-<section class="part" id="dev" data-step="10">
-  <div class="wrap" data-n="10">
+<section class="part" id="dev" data-step="11">
+  <div class="wrap" data-n="11">
     <div class="head">
       <div class="eyebrow" data-k="eb.10">البرمجة</div>
       <h2 data-k="dev.1">هنا أصبح التصميم منتجًا.</h2>
@@ -779,8 +828,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 11 -->
-<section class="part" id="engine" data-step="11">
-  <div class="wrap" data-n="11">
+<section class="part" id="engine" data-step="12">
+  <div class="wrap" data-n="12">
     <div class="head">
       <div class="eyebrow" data-k="eb.11">آلية التحليل</div>
       <h2 data-k="engine.1">من التعليق ... إلى المعرفة.</h2>
@@ -805,8 +854,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 12 -->
-<section class="part" id="deploy" data-step="12">
-  <div class="wrap" data-n="12">
+<section class="part" id="deploy" data-step="13">
+  <div class="wrap" data-n="13">
     <div class="head">
       <div class="eyebrow" data-k="eb.12">النشر</div>
       <h2 data-k="deploy.1">من بيئة التطوير إلى رابط يعمل.</h2>
@@ -823,8 +872,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 13 -->
-<section class="part" id="quality" data-step="13">
-  <div class="wrap" data-n="13">
+<section class="part" id="quality" data-step="14">
+  <div class="wrap" data-n="14">
     <div class="head">
       <div class="eyebrow" data-k="eb.13">الجودة</div>
       <h2 data-k="quality.1">لم نكتفِ بأن يعمل.</h2>
@@ -844,8 +893,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 14 -->
-<section class="part" id="live" data-step="14">
-  <div class="wrap" data-n="14">
+<section class="part" id="live" data-step="15">
+  <div class="wrap" data-n="15">
     <div class="head">
       <div class="eyebrow" data-k="eb.14">لحظة الحقيقة</div>
       <h2 data-k="live.1">والآن ... منصت أمامكم.</h2>
@@ -860,8 +909,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 15 -->
-<section class="part" id="results" data-step="15">
-  <div class="wrap" data-n="15">
+<section class="part" id="results" data-step="16">
+  <div class="wrap" data-n="16">
     <div class="head">
       <div class="eyebrow" data-k="eb.15">القياس</div>
       <h2 data-k="results.1">الأثر الحقيقي يحتاج دليلًا.</h2>
@@ -876,8 +925,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 16 -->
-<section class="part" id="impact" data-step="16">
-  <div class="wrap" data-n="16">
+<section class="part" id="impact" data-step="17">
+  <div class="wrap" data-n="17">
     <div class="head">
       <div class="eyebrow" data-k="eb.16">الأثر</div>
       <h2 data-k="impact.1">ما أنجزناه بداية لما هو أكبر.</h2>
@@ -890,11 +939,11 @@ body.editing .slot-tag{display:inline-block!important}
   </div>
 </section>
 
-<section class="act" data-step="16"><div class="wrap"><small>الفصل الرابع</small><h2>نُسمِع الناس عن منصت</h2><p>الحضور · التخطيط · المحتوى · لوحة التحكم · القياس</p></div></section>
+<section class="act" data-step="17"><div class="wrap"><small>الفصل الرابع</small><h2>نُسمِع الناس عن منصت</h2><p>الحضور · التخطيط · المحتوى · لوحة التحكم · القياس</p></div></section>
 
 <!-- 17 -->
-<section class="part" id="presence" data-step="17">
-  <div class="wrap" data-n="17">
+<section class="part" id="presence" data-step="18">
+  <div class="wrap" data-n="18">
     <div class="head">
       <div class="eyebrow" data-k="eb.17">بناء الحضور</div>
       <h2 data-k="presence.1">لم ننتظر الإطلاق لنبدأ التعريف بمنصت.</h2>
@@ -914,8 +963,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 18 -->
-<section class="part" id="marketing" data-step="18">
-  <div class="wrap" data-n="18">
+<section class="part" id="marketing" data-step="19">
+  <div class="wrap" data-n="19">
     <div class="head">
       <div class="eyebrow" data-k="eb.18">التخطيط</div>
       <h2 data-k="marketing.1">من نريد أن نصل إليه؟ ولماذا؟</h2>
@@ -931,8 +980,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 19 -->
-<section class="part" id="content" data-step="19">
-  <div class="wrap" data-n="19">
+<section class="part" id="content" data-step="20">
+  <div class="wrap" data-n="20">
     <div class="head">
       <div class="eyebrow" data-k="eb.19">التصميم التسويقي</div>
       <h2 data-k="content.1">هوية واحدة ... ورسائل متعددة.</h2>
@@ -947,8 +996,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 20 — dashboard video -->
-<section class="part" id="dashboard" data-step="20">
-  <div class="wrap" data-n="20">
+<section class="part" id="dashboard" data-step="21">
+  <div class="wrap" data-n="21">
     <div class="head">
       <div class="eyebrow" data-k="eb.20">التنفيذ</div>
       <h2 data-k="dashboard.1">لوحة تحكم تجمعنا ..</h2>
@@ -968,8 +1017,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 21 -->
-<section class="part" id="kpis" data-step="21">
-  <div class="wrap" data-n="21">
+<section class="part" id="kpis" data-step="22">
+  <div class="wrap" data-n="22">
     <div class="head">
       <div class="eyebrow" data-k="eb.21">القياس</div>
       <h2 data-k="kpis.1">نقيس الحضور ... ولا نكتفي بالنشر.</h2>
@@ -984,8 +1033,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 22 — investment file (compact) -->
-<section class="part" id="invest" data-step="22">
-  <div class="wrap" data-n="22">
+<section class="part" id="invest" data-step="23">
+  <div class="wrap" data-n="23">
     <div class="head">
       <div class="eyebrow" data-k="eb.22">الملف الاستثماري</div>
       <h2 data-k="invest.1">من البيانات إلى قرارات تصنع الفرق.</h2>
@@ -1048,8 +1097,8 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- 23 — team -->
-<section class="part" id="team-people" data-step="23">
-  <div class="wrap" data-n="23">
+<section class="part" id="team-people" data-step="24">
+  <div class="wrap" data-n="24">
     <div class="head">
       <div class="eyebrow">الفريق</div>
       <h2>تعرّف على الفريق الذي وراء منصت.</h2>
@@ -1069,7 +1118,7 @@ body.editing .slot-tag{display:inline-block!important}
 </section>
 
 <!-- closing + site link -->
-<section class="closing" id="visit" data-step="23">
+<section class="closing" id="visit" data-step="24">
   <div class="wrap">
     <div class="eq" id="eq" aria-hidden="true"></div>
     <img src="assets/logo-white.webp" alt="منصت Ministry">
