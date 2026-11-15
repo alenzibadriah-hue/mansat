@@ -1,15 +1,4 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="منصت | رحلة بناء منتج رقمي ذكي يحلّل شكاوى العملاء ويحوّلها إلى فهم."><meta property="og:title" content="منصت | رحلة بناء المنتج"><meta property="og:image" content="assets/hero.webp"><link rel="icon" href="assets/logo.webp"><style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}/* ── team members ── */
-.members{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.members > li{flex:0 1 calc(25% - 9px);min-width:0}
-.member{display:grid;justify-items:center;text-align:center;gap:6px;padding:26px 16px;border-radius:var(--r-lg);background:var(--inset);transition:transform .3s var(--ease)}
-.member:hover{transform:translateY(-4px)}
-.member .avatar{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);font-family:var(--f-display);font-weight:700;font-size:26px;border:2px dashed #cbc2fb;margin-bottom:6px;overflow:hidden}
-.member .avatar img{width:100%;height:100%;object-fit:cover}
-.member b{font-family:var(--f-display);font-weight:700;font-size:17px;line-height:1.4}
-.member span:not(.avatar){color:var(--muted);font-size:14px}
-@media (max-width:900px){.members > li{flex-basis:calc(50% - 6px)}}
-
-</style></head><body><title>منصت | رحلة بناء المنتج</title>
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="منصت | رحلة بناء منتج رقمي ذكي يحلّل شكاوى العملاء ويحوّلها إلى فهم."><meta property="og:title" content="منصت | رحلة بناء المنتج"><meta property="og:image" content="assets/hero.webp"><link rel="icon" href="assets/logo.webp"><style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style></head><body><title>منصت | رحلة بناء المنتج</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1066,16 +1055,16 @@ body.editing .slot-tag{display:inline-block!important}
       <h2>تعرّف على الفريق الذي وراء منصت.</h2>
       <p>سبعة أعضاء حوّلوا فكرة من نقاش إلى منصة تعمل.</p>
     </div>
-    <ul class="members">
-        <li class="member"><span class="avatar" aria-hidden="true">1</span><b data-k="team-people.n1">اسم العضو</b><span data-k="team-people.r1">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">2</span><b data-k="team-people.n2">اسم العضو</b><span data-k="team-people.r2">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">3</span><b data-k="team-people.n3">اسم العضو</b><span data-k="team-people.r3">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">4</span><b data-k="team-people.n4">اسم العضو</b><span data-k="team-people.r4">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">5</span><b data-k="team-people.n5">اسم العضو</b><span data-k="team-people.r5">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">6</span><b data-k="team-people.n6">اسم العضو</b><span data-k="team-people.r6">الدور في الفريق</span></li>
-        <li class="member"><span class="avatar" aria-hidden="true">7</span><b data-k="team-people.n7">اسم العضو</b><span data-k="team-people.r7">الدور في الفريق</span></li>
-    </ul>
-    <figure class="slot" style="--ar:16/9"><span class="slot-tag">slot · team-video</span><div class="slot-box"><svg><use href="#i-vid"/></svg><b data-k="team-people.v1">فيديو يُضاف لاحقًا</b><span data-k="team-people.v2">فيديو تعريفي بفريق منصت</span></div></figure>
+        <figure class="player">
+      <video id="team-video" controls playsinline preload="metadata" poster="assets/team-poster.jpg">
+        <source src="assets/team.mp4" type="video/mp4">
+      </video>
+      <button class="cover" type="button" data-video="team-video" aria-label="تشغيل فيديو فريق منصت">
+        <img src="assets/team-poster.jpg" alt="">
+        <span class="play"><svg><use href="#i-play"/></svg></span>
+        <span class="cap"><b>فريق منصت</b><span>سبعة أعضاء · دقيقتان تقريبًا</span></span>
+      </button>
+    </figure>
   </div>
 </section>
 
