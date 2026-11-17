@@ -632,7 +632,7 @@ body.editing .slot-tag{display:inline-block!important}
 <!-- 04 -->
 <section class="part" id="team" data-step="4">
   <div class="wrap" data-n="04">
-    <div class="split">
+    <div>
       <div class="head">
         <div class="eyebrow" data-k="eb.4">الفريق</div>
         <h2 data-k="team.1">سبعة أعضاء. مسؤولية مشتركة.</h2>
@@ -641,10 +641,6 @@ body.editing .slot-tag{display:inline-block!important}
           <li data-k="team.3">الهوية والتصميم</li><li data-k="team.4">البرمجة والتطوير</li><li data-k="team.5">البحث والتحليل</li>
           <li data-k="team.6">إدارة المشروع</li><li data-k="team.7">الاختبار والتوثيق</li><li data-k="team.8">تجربة المستخدم</li>
         </ul>
-      </div>
-      <div class="orbit" aria-label="سبعة أعضاء يدورون حول فكرة واحدة">
-        <div class="ring" id="ring"></div>
-        <div class="core"><div><b data-k="team.9">7</b><span>أعضاء حول فكرة واحدة</span></div></div>
       </div>
     </div>
   </div>
@@ -1136,7 +1132,7 @@ document.getElementById("eq").innerHTML = Array.from({length: innerWidth < 640 ?
   `<i style="--h:${amp(i).toFixed(3)};--dl:${(-(i * 0.17) % 1.6).toFixed(2)}s"></i>`).join("");
 
 /* team orbit */
-document.getElementById("ring").innerHTML = Array.from({length:7}, (_, i) =>
+(document.getElementById("ring")||{}).innerHTML = Array.from({length:7}, (_, i) =>
   `<i style="--a:${(i * 360 / 7 - 90).toFixed(1)}deg"><span>${i + 1}</span></i>`).join("");
 
 /* ── sample data (illustrative) ── */
