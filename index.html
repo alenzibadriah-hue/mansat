@@ -1,5 +1,12 @@
 <!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="منصت | رحلة بناء منتج رقمي ذكي يحلّل شكاوى العملاء ويحوّلها إلى فهم."><meta property="og:title" content="منصت | رحلة بناء المنتج"><meta property="og:image" content="assets/hero.webp"><link rel="icon" href="assets/logo.webp"><style>[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}a.channel{text-decoration:none;color:inherit;transition:background .25s,transform .25s}
 a.channel:hover{background:var(--brand-wash);transform:translateY(-3px)}
+/* ── control panel gallery ── */
+.cp-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.cp-item{flex:0 1 calc(25% - 9px);min-width:0;display:grid;gap:8px;text-decoration:none;color:inherit}
+.cp-item img{width:100%;aspect-ratio:32/15;object-fit:cover;object-position:top;border-radius:14px;border:1px solid var(--line);background:var(--inset);transition:transform .25s var(--ease),box-shadow .25s}
+.cp-item:hover img{transform:translateY(-3px);box-shadow:0 16px 30px -18px rgba(96,69,245,.6)}
+.cp-item span{font-size:13px;color:var(--muted);text-align:center;font-family:var(--f-display)}
+@media (max-width:640px){.cp-item{flex-basis:calc(50% - 6px)}}
 </style></head><body><title>منصت | رحلة بناء المنتج</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -572,7 +579,7 @@ body.editing .slot-tag{display:inline-block!important}
     <a class="show contain" href="#identity"><img src="assets/logo-white.webp" alt="شعار منصت"><span class="tag">الهوية <em>/ 07</em></span></a>
     <a class="show" href="#identity"><img data-img="top.i2" src="assets/mock-phone.webp" alt="تطبيق منصت على الجوال"><span class="tag">التطبيقات <em>/ 07</em></span></a>
     <a class="show light" href="#wireframes"><img data-img="top.i3" src="assets/wf-sitemap.webp" alt="خريطة صفحات منصت"><span class="tag">تخطيط الواجهات <em>/ 09</em></span></a>
-    <a class="show" href="#dashboard"><img data-img="top.i4" src="assets/dashboard-poster.jpg" alt="لقطة من لوحة تحكم فريق منصت"><span class="tag">لوحة التحكم <em>/ 20</em></span></a>
+    <a class="show" href="#dashboard"><img data-img="top.i4" src="assets/cp-overview.webp" alt="لقطة من لوحة تحكم فريق منصت" style="object-position:right top"><span class="tag">لوحة التحكم <em>/ 20</em></span></a>
     <a class="show" href="#identity"><img data-img="top.i5" src="assets/mock-laptop.webp" alt="منصت على حاسوب محمول"><span class="tag">الواجهة <em>/ 07</em></span></a>
   </div>
 </section>
@@ -948,16 +955,15 @@ body.editing .slot-tag{display:inline-block!important}
       <h2 data-k="dashboard.1">لوحة تحكم تجمعنا ..</h2>
       <p data-k="dashboard.2">أعددنا لوحة تحكم خاصة بفريق منصت، واعتمدنا فيها وكيل ذكاء اصطناعي يساندنا.</p>
     </div>
-    <figure class="player">
-      <video id="dash-video" controls playsinline preload="metadata" poster="assets/dashboard-poster.jpg">
-        <source src="assets/dashboard.mp4" type="video/mp4">
-      </video>
-      <button class="cover" type="button" data-video="dash-video" aria-label="تشغيل فيديو شرح لوحة التحكم">
-        <img data-img="dashboard.i1" src="assets/dashboard-poster.jpg" alt="">
-        <span class="play"><svg><use href="#i-play"/></svg></span>
-        <span class="cap"><b data-k="dashboard.3">شرح لوحة التحكم</b><span>دقيقة ونصف تقريبًا</span></span>
-      </button>
-    </figure>
+    <div class="cp-grid">
+      <a class="cp-item" href="assets/cp-login.webp" target="_blank" rel="noopener"><img src="assets/cp-login.webp" alt="لوحة تحكم فريق منصت: تسجيل الدخول" loading="lazy"><span>تسجيل الدخول</span></a>
+      <a class="cp-item" href="assets/cp-overview.webp" target="_blank" rel="noopener"><img src="assets/cp-overview.webp" alt="لوحة تحكم فريق منصت: نظرة عامة" loading="lazy"><span>نظرة عامة</span></a>
+      <a class="cp-item" href="assets/cp-marketing.webp" target="_blank" rel="noopener"><img src="assets/cp-marketing.webp" alt="لوحة تحكم فريق منصت: التسويق والحملات" loading="lazy"><span>التسويق والحملات</span></a>
+      <a class="cp-item" href="assets/cp-customers.webp" target="_blank" rel="noopener"><img src="assets/cp-customers.webp" alt="لوحة تحكم فريق منصت: العملاء والاستخدام" loading="lazy"><span>العملاء والاستخدام</span></a>
+      <a class="cp-item" href="assets/cp-import.webp" target="_blank" rel="noopener"><img src="assets/cp-import.webp" alt="لوحة تحكم فريق منصت: استيراد البيانات" loading="lazy"><span>استيراد البيانات</span></a>
+      <a class="cp-item" href="assets/cp-agent.webp" target="_blank" rel="noopener"><img src="assets/cp-agent.webp" alt="لوحة تحكم فريق منصت: الوكيل الذكي" loading="lazy"><span>الوكيل الذكي</span></a>
+      <a class="cp-item" href="assets/cp-team.webp" target="_blank" rel="noopener"><img src="assets/cp-team.webp" alt="لوحة تحكم فريق منصت: الفريق والصلاحيات" loading="lazy"><span>الفريق والصلاحيات</span></a>
+    </div>
   </div>
 </section>
 
